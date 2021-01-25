@@ -20,4 +20,10 @@ public class TddServiceTest {
         Assert.assertEquals("test lab test", testResult);
     }
 
+    @Test
+    public void successNothingToReplaceTest() {
+        final String testResult = service.replaceOccurrences("test bla test", "lab", "lab", 1);
+        Assert.assertEquals("test bla test", testResult);
+    }
+
 }

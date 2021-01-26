@@ -29,5 +29,4 @@ public class TddService {
         } while (startIndex < str.length());
         return result.toString();
     }
-
 }

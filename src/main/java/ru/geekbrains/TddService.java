@@ -8,6 +8,6 @@ public class TddService {
 
     public String replaceOccurrences(final String str, final String what, final String to, final int count) {
 
-        return str;
+        return "";
     }
 }

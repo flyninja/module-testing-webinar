@@ -8,8 +8,8 @@ public class ConstructorDoesSomething {
 
     private final NestedObject nestedObject;
 
-    public ConstructorDoesSomething() {
-        this.nestedObject = NestedObjectFactory.getInstance().getNestedObject();
+    public ConstructorDoesSomething(NestedObject nestedObject) {
+        this.nestedObject = nestedObject;
     }
 
 

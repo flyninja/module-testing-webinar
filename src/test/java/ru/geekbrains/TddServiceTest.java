@@ -26,18 +26,6 @@ public class TddServiceTest {
         Assert.assertEquals("test bla test", testResult);
     }
 
-    @Test
-    public void successLesserCountTest() {
-        final String testResult = service.replaceOccurrences("test bla test", "bla", "lab", -1);
-        Assert.assertEquals("test bla test", testResult);
-    }
-
-    @Test
-    public void successGreaterCountTest() {
-        final String testResult = service.replaceOccurrences("test bla test", "bla", "lab", 2);
-        Assert.assertEquals("test lab test", testResult);
-    }
-
     @Test(expected = IllegalArgumentException.class)
     public void errorSrcNullTest() {
         service.replaceOccurrences(null, "lab", "lab", 1);
@@ -51,6 +39,18 @@ public class TddServiceTest {
     @Test(expected = IllegalArgumentException.class)
     public void errorToNullTest() {
         service.replaceOccurrences("test bla test", "bla", null, 1);
+    }
+
+    @Test
+    public void successLesserCountTest() {
+        final String testResult = service.replaceOccurrences("test bla test", "bla", "lab", -1);
+        Assert.assertEquals("test bla test", testResult);
+    }
+
+    @Test
+    public void successGreaterCountTest() {
+        final String testResult = service.replaceOccurrences("test bla test", "bla", "lab", 2);
+        Assert.assertEquals("test lab test", testResult);
     }
 
 }

@@ -9,8 +9,6 @@ public class ConstructorDoesSomething {
     private final NestedObject nestedObject;
 
     public ConstructorDoesSomething(NestedObject nestedObject) {
-        nestedObject.setFieldInt(1);
-        nestedObject.setFieldString("ss");
         this.nestedObject = nestedObject;
     }
 

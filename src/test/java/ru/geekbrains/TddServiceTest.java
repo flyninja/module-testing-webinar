@@ -37,4 +37,20 @@ public class TddServiceTest {
         final String testResult = service.replaceOccurrences("test bla test", "bla", "lab", 2);
         Assert.assertEquals("test lab test", testResult);
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void errorSrcNullTest() {
+        service.replaceOccurrences(null, "lab", "lab", 1);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void errorWhatNullTest() {
+        service.replaceOccurrences("test bla test", null, "lab", 1);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void errorToNullTest() {
+        service.replaceOccurrences("test bla test", "bla", null, 1);
+    }
+
 }

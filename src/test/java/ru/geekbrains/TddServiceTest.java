@@ -53,4 +53,10 @@ public class TddServiceTest {
         Assert.assertEquals("test lab test", testResult);
     }
 
+    @Test
+    public void successGreaterToReplaceTest() {
+        final String testResult = service.replaceOccurrences("test bla bla test", "bla", "lab", 1);
+        Assert.assertEquals("test lab bla test", testResult);
+    }
+
 }

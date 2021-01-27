@@ -6,12 +6,12 @@ package ru.geekbrains;
  */
 public class ConstructorDoesSomething {
 
-    private final NestedObject1 nestedObject1 = new NestedObject1();
+    private final NestedObject nestedObject;
 
-    private final NestedObject2 nestedObject2;
-
-    public ConstructorDoesSomething() {
-        nestedObject2 = new NestedObject2();
+    public ConstructorDoesSomething(NestedObject nestedObject) {
+        nestedObject.setFieldInt(1);
+        nestedObject.setFieldString("ss");
+        this.nestedObject = nestedObject;
     }
 
 

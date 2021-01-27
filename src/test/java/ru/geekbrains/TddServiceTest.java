@@ -59,4 +59,22 @@ public class TddServiceTest {
         Assert.assertEquals("test lab bla test", testResult);
     }
 
+    @Test
+    public void successEmptySrcTest() {
+        final String testResult = service.replaceOccurrences("", "bla", "lab", 1);
+        Assert.assertEquals("", testResult);
+    }
+
+    @Test
+    public void successEmptyWhatTest() {
+        final String testResult = service.replaceOccurrences("test bla test", "", "lab", 1);
+        Assert.assertEquals("test bla test", testResult);
+    }
+
+    @Test
+    public void successEmptyToTest() {
+        final String testResult = service.replaceOccurrences("test bla test", "bla", "", 1);
+        Assert.assertEquals("test  test", testResult);
+    }
+
 }

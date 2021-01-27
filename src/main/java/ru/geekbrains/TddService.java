@@ -7,8 +7,8 @@ package ru.geekbrains;
 public class TddService {
 
     public String replaceOccurrences(final String str, final String what, final String to, final int count) {
-        if (str == null || str.isEmpty()) {
-            return str;
+        if (str == null || what == null || to == null) {
+            throw new IllegalArgumentException("one of argument is null");
         }
         final StringBuilder result = new StringBuilder();
         int startIndex = 0, nextIndex = 0, replaces = 0;

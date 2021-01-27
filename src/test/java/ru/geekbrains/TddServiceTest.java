@@ -27,13 +27,13 @@ public class TddServiceTest {
     }
 
     @Test
-    public void successLessCountTest() {
+    public void successLesserCountTest() {
         final String testResult = service.replaceOccurrences("test bla test", "bla", "lab", -1);
         Assert.assertEquals("test bla test", testResult);
     }
 
     @Test
-    public void successGreatCountTest() {
+    public void successGreaterCountTest() {
         final String testResult = service.replaceOccurrences("test bla test", "bla", "lab", 2);
         Assert.assertEquals("test lab test", testResult);
     }

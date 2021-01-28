@@ -8,8 +8,9 @@ public class ConstructorDoesSomething {
 
     private final int staticInt;
 
-    public ConstructorDoesSomething() {
-        staticInt = StaticObject.STATIC_INT;
+    public ConstructorDoesSomething(int staticInt) {
+
+        this.staticInt = staticInt;
     }
 
 

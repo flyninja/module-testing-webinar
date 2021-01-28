@@ -6,16 +6,10 @@ package ru.geekbrains;
  */
 public class ConstructorDoesSomething {
 
-    private final NestedObject1 nestedObject1;
+    private final NestedObject2 nestedObject2;
 
-    private NestedObject2 nestedObject2;
-
-    public ConstructorDoesSomething(NestedObject1 nestedObject1) {
-        this.nestedObject1 = nestedObject1;
-    }
-
-    void initialize() {
-        nestedObject2 = new NestedObject2(nestedObject1);
+    public ConstructorDoesSomething(NestedObject2 nestedObject2) {
+        this.nestedObject2 = nestedObject2;
     }
 
 

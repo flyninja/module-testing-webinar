@@ -18,7 +18,7 @@ public class ConstructorDoesSomethingTest {
 
     @Test
     public void secondTest() {
-        final ConstructorDoesSomethingService instance = new ConstructorDoesSomethingService();
+        final ConstructorDoesSomethingService instance = new ConstructorDoesSomethingService(new ConstructorDoesSomething(new NestedObject()));
         final int result = instance.getInt();
         Assert.assertEquals(0, result);
     }

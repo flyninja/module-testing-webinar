@@ -6,7 +6,11 @@ package ru.geekbrains;
  */
 public class ConstructorDoesSomethingService {
 
-    private ConstructorDoesSomething instance = new ConstructorDoesSomething();
+    private final ConstructorDoesSomething instance;
+
+    public ConstructorDoesSomethingService(ConstructorDoesSomething instance) {
+        this.instance = instance;
+    }
 
     public int getInt() {
         return instance.testingIsRequired();

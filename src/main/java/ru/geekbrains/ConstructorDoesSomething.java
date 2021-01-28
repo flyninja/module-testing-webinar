@@ -13,11 +13,6 @@ public class ConstructorDoesSomething {
         this.nestedObject = nestedObject;
     }
 
-    public ConstructorDoesSomething() {
-        nestedObject = new RlNestedObject();
-    }
-
-
     public int testingIsRequired() {
         return 0;
     }

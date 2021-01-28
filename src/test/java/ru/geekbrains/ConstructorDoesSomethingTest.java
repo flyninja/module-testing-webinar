@@ -11,7 +11,7 @@ public class ConstructorDoesSomethingTest {
 
     @Test
     public void successTest() {
-        final ConstructorDoesSomething instance = new ConstructorDoesSomething();
+        final ConstructorDoesSomething instance = new ConstructorDoesSomething(new NestedObject1());
         final int result = instance.testingIsRequired();
         Assert.assertEquals(0, result);
     }

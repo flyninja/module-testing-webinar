@@ -6,15 +6,19 @@ package ru.geekbrains;
  */
 public class ConstructorDoesSomething {
 
-    private final int staticInt;
+    private final INestedObject nestedObject;
 
     public ConstructorDoesSomething() {
-        staticInt = StaticObject.STATIC_INT;
+        if (StaticObject.STATIC_INT == 0) {
+            nestedObject = new NestedObject1();
+        } else {
+            nestedObject = new NestedObject2();
+        }
     }
 
 
     public int testingIsRequired() {
-        return staticInt;
+        return nestedObject.getInt();
     }
 
 }

@@ -8,12 +8,8 @@ public class ConstructorDoesSomething {
 
     private final INestedObject nestedObject;
 
-    public ConstructorDoesSomething() {
-        if (StaticObject.STATIC_INT == 0) {
-            nestedObject = new NestedObject1();
-        } else {
-            nestedObject = new NestedObject2();
-        }
+    public ConstructorDoesSomething(INestedObject nestedObject) {
+        this.nestedObject = nestedObject;
     }
 
 

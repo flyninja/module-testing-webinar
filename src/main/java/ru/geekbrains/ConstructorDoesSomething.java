@@ -8,10 +8,13 @@ public class ConstructorDoesSomething {
 
     private final NestedObject nestedObject;
 
+    // for testing
     public ConstructorDoesSomething(NestedObject nestedObject) {
-        nestedObject.setFieldInt(1);
-        nestedObject.setFieldString("ss");
         this.nestedObject = nestedObject;
+    }
+
+    public ConstructorDoesSomething() {
+        nestedObject = new RlNestedObject();
     }
 
 

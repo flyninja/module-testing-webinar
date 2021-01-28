@@ -10,9 +10,16 @@ import org.junit.Test;
 public class ConstructorDoesSomethingTest {
 
     @Test
-    public void successTest() {
+    public void firstTest() {
         final ConstructorDoesSomething instance = new ConstructorDoesSomething(new NestedObject());
         final int result = instance.testingIsRequired();
+        Assert.assertEquals(0, result);
+    }
+
+    @Test
+    public void secondTest() {
+        final ConstructorDoesSomethingService instance = new ConstructorDoesSomethingService();
+        final int result = instance.getInt();
         Assert.assertEquals(0, result);
     }
 

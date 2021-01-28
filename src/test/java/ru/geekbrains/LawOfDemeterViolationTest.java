@@ -12,7 +12,7 @@ public class LawOfDemeterViolationTest {
     @Test
     public void successTest() {
         final LawOfDemeterViolation instance = new LawOfDemeterViolation(new OneObject());
-        final int result = instance.testingIsRequired(new SecondObject());
+        final int result = instance.testingIsRequired("ss");
         Assert.assertEquals(0, result);
     }
 

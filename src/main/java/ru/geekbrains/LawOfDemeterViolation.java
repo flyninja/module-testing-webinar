@@ -13,8 +13,8 @@ public class LawOfDemeterViolation {
     }
 
 
-    public int testingIsRequired(SecondObject o) {
-        return 1 + oneObject.get(o.getFieldString());
+    public int testingIsRequired(String s) {
+        return 1 + oneObject.get(s);
     }
 
 }

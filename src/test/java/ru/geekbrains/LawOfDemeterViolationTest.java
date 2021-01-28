@@ -7,12 +7,12 @@ import org.junit.Test;
  * @author Vitaly Alekseev
  * @since 28.01.2021
  */
-public class ConstructorDoesSomethingTest {
+public class LawOfDemeterViolationTest {
 
     @Test
     public void successTest() {
-        final ConstructorDoesSomething instance = new ConstructorDoesSomething(new NestedObject());
-        final int result = instance.testingIsRequired();
+        final LawOfDemeterViolation instance = new LawOfDemeterViolation(new OneObject());
+        final int result = instance.testingIsRequired(new SecondObject());
         Assert.assertEquals(0, result);
     }
 

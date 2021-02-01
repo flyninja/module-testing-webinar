@@ -6,23 +6,7 @@ package ru.geekbrains;
  */
 public class SecondObject {
 
-    private int fieldInt;
-
-    private String fieldString;
-
-    public void setFieldInt(int i) {
-        fieldInt = i;
-    }
-
-    public void setFieldString(String s) {
-        fieldString = s;
-    }
-
-    public int getFieldInt() {
-        return fieldInt;
-    }
-
-    public String getFieldString() {
-        return fieldString;
+    public ThirdObject getObject() {
+        return new ThirdObject();
     }
 }

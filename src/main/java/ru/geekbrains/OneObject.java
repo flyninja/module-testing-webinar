@@ -6,8 +6,8 @@ package ru.geekbrains;
  */
 public class OneObject {
 
-    public int get(String key) {
-        return 1;
+    public String get() {
+        return "qqq";
     }
 
 }

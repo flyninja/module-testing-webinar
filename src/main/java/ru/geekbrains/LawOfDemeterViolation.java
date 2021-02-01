@@ -6,18 +6,9 @@ package ru.geekbrains;
  */
 public class LawOfDemeterViolation {
 
-    private final OneObject oneObject;
-    private final SecondObject secondObject;
-
-    public LawOfDemeterViolation(OneObject oneObject, SecondObject secondObject) {
-        this.oneObject = oneObject;
-        this.secondObject = secondObject;
-    }
-
-
-    public int testingIsRequired() {
-        ThirdObject o = secondObject.getObject();
-        return o.doSomething(oneObject.get());
+    public int testingIsRequired(ContextObject contextObject) {
+        ThirdObject o = contextObject.getSecondObject().getObject();
+        return o.doSomething(contextObject.get());
     }
 
 }

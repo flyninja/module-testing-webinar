@@ -11,7 +11,7 @@ public class LawOfDemeterViolationTest {
 
     @Test
     public void successTest() {
-        final LawOfDemeterViolation instance = new LawOfDemeterViolation(new OneObject());
+        final LawOfDemeterViolation instance = new LawOfDemeterViolation(new OneObject(), new SecondObject());
         final int result = instance.testingIsRequired();
         Assert.assertEquals(0, result);
     }

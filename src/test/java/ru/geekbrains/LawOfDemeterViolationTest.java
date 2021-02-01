@@ -11,7 +11,7 @@ public class LawOfDemeterViolationTest {
 
     @Test
     public void successTest() {
-        final int result = new LawOfDemeterViolation().testingIsRequired(new ContextObject());
+        final int result = new LawOfDemeterViolation().testingIsRequired(new ContextObject.Builder().key("ddd").secondObject(new SecondObject()).build());
         Assert.assertEquals(0, result);
     }
 

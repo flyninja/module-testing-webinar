@@ -6,9 +6,8 @@ package ru.geekbrains;
  */
 public class LawOfDemeterViolation {
 
-    public int testingIsRequired(ContextObject contextObject) {
-        ThirdObject o = contextObject.getSecondObject().getObject();
-        return o.doSomething(contextObject.get());
+    public int testingIsRequired(ThirdObject thirdObject, String key) {
+        return thirdObject.doSomething(key);
     }
 
 }

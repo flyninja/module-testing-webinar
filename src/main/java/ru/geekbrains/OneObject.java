@@ -6,8 +6,13 @@ package ru.geekbrains;
  */
 public class OneObject {
 
-    public int get(String key) {
+    private SecondObject guardResource = new SecondObject();
+
+    public int get() {
         return 1;
     }
 
+    public SecondObject getGuardResource() {
+        return guardResource;
+    }
 }

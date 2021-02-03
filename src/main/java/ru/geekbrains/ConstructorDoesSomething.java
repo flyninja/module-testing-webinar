@@ -11,7 +11,7 @@ public class ConstructorDoesSomething {
     public ConstructorDoesSomething() {
         this.nestedObject = NestedObjectFactory.getInstance().getNestedObject();
         /**
-         * next one is also will be wrong
+         * next one is also wrong
          *
          * this.nestedObject = new NestedObjectFactory().getNestedObject();
          */
